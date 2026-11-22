@@ -1,0 +1,22 @@
+{
+  "name": "ai-powered-personalized-study-plan-generator",
+  "version": "1.0.0",
+  "description": "AI-Powered Personalized Study Plan Generator Using Prompt Engineering with Google Gemini and MongoDB",
+  "scripts": {
+    "start:backend": "npm --prefix backend start",
+    "start:frontend": "npm --prefix frontend dev",
+    "build:frontend": "npm --prefix frontend build",
+    "test:backend": "npm --prefix backend test"
+  },
+  "keywords": [
+    "prompt-engineering",
+    "gemini-ai",
+    "study-planner",
+    "react",
+    "nodejs",
+    "mongodb",
+    "education"
+  ],
+  "author": "Antigravity Engineering",
+  "license": "ISC"
+}
