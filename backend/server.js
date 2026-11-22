@@ -26,15 +26,24 @@ app.use(cors({
 app.use(express.json({ limit: '10mb' }));
 app.use(morgan('dev'));
 
-// Mount API routes
+// Mount API routes (supports both /api/* and root prefixes)
 app.use('/api/study-plans', studyPlanRoutes);
+app.use('/study-plans', studyPlanRoutes);
+
 app.use('/api/sessions', studySessionRoutes);
+app.use('/sessions', studySessionRoutes);
+
 app.use('/api/ai', aiRoutes);
+app.use('/ai', aiRoutes);
+
 app.use('/api/evaluation', evaluationRoutes);
+app.use('/evaluation', evaluationRoutes);
+
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/dashboard', dashboardRoutes);
 
 // Health & Diagnostic API
-app.get('/api/health', async (req, res) => {
+const handleHealth = async (req, res) => {
   const dbStatus = getDBStatus();
   const geminiConfig = getGeminiConfig();
 
@@ -50,15 +59,20 @@ app.get('/api/health', async (req, res) => {
     version: '1.0.0',
     app: 'AI-Powered Personalized Study Plan Generator',
   });
-});
+};
+
+app.get('/api/health', handleHealth);
+app.get('/health', handleHealth);
 
 // Sample Test Data API for instant loading
-app.get('/api/sample-data', (req, res) => {
+const handleSampleData = (req, res) => {
   res.status(200).json({
     success: true,
     data: sampleStudyPlanData,
   });
-});
+};
+app.get('/api/sample-data', handleSampleData);
+app.get('/sample-data', handleSampleData);
 
 // Root welcome endpoint
 app.get('/', (req, res) => {
