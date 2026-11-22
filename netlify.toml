@@ -1,0 +1,15 @@
+# Netlify Configuration for AI-Powered Study Plan Generator
+
+[build]
+  # Navigate to frontend folder for builds
+  base = "frontend"
+  # Where the production build is output
+  publish = "dist"
+  # Vite production build command
+  command = "npm run build"
+
+# SPA Routing: Redirect all routes to index.html to support React Router DOM
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
