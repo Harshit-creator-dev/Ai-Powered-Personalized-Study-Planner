@@ -1,13 +1,14 @@
 # Netlify Configuration for AI-Powered Study Plan Generator (Full-Stack)
 
 [build]
-  command = "npm --prefix frontend run build"
-  publish = "frontend/dist"
+  command = "npm run build"
+  publish = "dist"
   functions = "netlify/functions"
 
 [functions]
   node_bundler = "esbuild"
   included_files = ["backend/**"]
+  external_node_modules = ["mongodb-memory-server"]
 
 # API routes: Route /api/* to the serverless backend function
 [[redirects]]

@@ -28,7 +28,8 @@ const connectDB = async () => {
 
   // 2. Try mongodb-memory-server fallback if installed
   try {
-    const { MongoMemoryServer } = require('mongodb-memory-server');
+    const memPkg = 'mongodb-memory-server';
+    const { MongoMemoryServer } = require(memPkg);
     console.log('ℹ️ [Database] Initializing in-memory MongoDB fallback...');
     memoryServerInstance = await MongoMemoryServer.create();
     const fallbackUri = memoryServerInstance.getUri();
