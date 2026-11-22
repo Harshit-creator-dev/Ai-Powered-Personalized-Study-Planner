@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "AI-Powered Personalized Study Plan Generator Using Prompt Engineering with Google Gemini and MongoDB",
   "scripts": {
+    "build": "npm --prefix frontend run build",
     "start:backend": "npm --prefix backend start",
     "start:frontend": "npm --prefix frontend dev",
     "build:frontend": "npm --prefix frontend build",
@@ -18,5 +19,8 @@
     "education"
   ],
   "author": "Antigravity Engineering",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "serverless-http": "^4.0.0"
+  }
 }

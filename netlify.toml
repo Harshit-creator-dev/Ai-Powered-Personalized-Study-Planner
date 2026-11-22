@@ -1,14 +1,21 @@
-# Netlify Configuration for AI-Powered Study Plan Generator
+# Netlify Configuration for AI-Powered Study Plan Generator (Full-Stack)
 
 [build]
-  # Navigate to frontend folder for builds
-  base = "frontend"
-  # Where the production build is output
-  publish = "dist"
-  # Vite production build command
-  command = "npm run build"
+  command = "npm --prefix frontend run build"
+  publish = "frontend/dist"
+  functions = "netlify/functions"
 
-# SPA Routing: Redirect all routes to index.html to support React Router DOM
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["backend/**"]
+
+# API routes: Route /api/* to the serverless backend function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+# Client routes: Route all other requests to index.html for React Router DOM
 [[redirects]]
   from = "/*"
   to = "/index.html"

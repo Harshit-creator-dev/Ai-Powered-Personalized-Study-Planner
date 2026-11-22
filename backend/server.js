@@ -82,7 +82,7 @@ app.get('/', (req, res) => {
 // Centralized error handler
 app.use(errorHandler);
 
-// Start Server
+// Start Server if run directly
 const startServer = async () => {
   try {
     await connectDB();
@@ -99,6 +99,8 @@ const startServer = async () => {
   }
 };
 
-startServer();
+if (require.main === module) {
+  startServer();
+}
 
 module.exports = app;
