@@ -16,7 +16,7 @@ Developed from scratch with **React 18**, **Node.js / Express.js**, **MongoDB At
 2. [Problem Statement](#problem-statement)
 3. [Objectives](#objectives)
 4. [Target Users](#target-users)
-5. [Comparative Analysis: MyStudyLife vs StudyGen AI](#comparative-analysis-mystudylife-vs-studygen-ai)
+5. [Comparative Analysis: MyStudyLife vs Saarni AI](#comparative-analysis-mystudylife-vs-saarni-ai)
 6. [Proposed Solution](#proposed-solution)
 7. [Technology Stack](#technology-stack)
 8. [System Architecture](#system-architecture)
@@ -77,9 +77,9 @@ University and college students face critical structural hurdles when planning e
 
 ---
 
-## 5. Comparative Analysis: MyStudyLife vs StudyGen AI
+## 5. Comparative Analysis: MyStudyLife vs Saarni AI
 
-| Feature / Dimension | Traditional Planners (e.g., MyStudyLife) | StudyGen AI (Proposed Solution) |
+| Feature / Dimension | Traditional Planners (e.g., MyStudyLife) | Saarni AI (Proposed Solution) |
 | :--- | :--- | :--- |
 | **Schedule Generation** | Manual drag-and-drop of every slot | Fully automated prompt-engineered AI synthesis |
 | **Cognitive Science Pacing** | None (Static calendar grid) | Built-in 4-tier distribution (Learning, Revision, Practice, Mock Exam) |

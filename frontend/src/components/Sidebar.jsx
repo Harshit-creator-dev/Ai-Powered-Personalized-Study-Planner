@@ -85,7 +85,7 @@ export const Sidebar = ({ isOpen, setIsOpen }) => {
             </div>
             <div>
               <div style={{ fontSize: '1.0625rem', fontWeight: 800, color: 'var(--text-main)', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
-                StudyGen AI
+                Saarni AI
               </div>
               <div style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--primary)' }}>
                 Prompt Engineering

@@ -221,7 +221,7 @@ export const LandingPage = () => {
           {/* Our AI Solution */}
           <div style={{ padding: '24px', backgroundColor: '#ecfdf5', borderRadius: '16px', border: '1px solid rgba(16, 185, 129, 0.25)' }}>
             <h3 style={{ color: '#065f46', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span>Our Proposed Solution: AI-Powered StudyGen</span>
+              <span>Our Proposed Solution: Saarni AI</span>
             </h3>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.9rem', color: '#064e3b' }}>
               <li style={{ display: 'flex', gap: '10px' }}>
